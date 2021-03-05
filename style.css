@@ -323,7 +323,7 @@ figure {
 }
 
 #fixed {
-    background-image: url('img/fer3.png');
+    background-image: url('img/f4.png');
     position: fixed;
     display: block;
     top: 0;
@@ -336,6 +336,8 @@ figure {
     transform: translateZ(0);
     will-change: transform;
 }
+
+
 /*--- Bootstrap Padding Fix --*/
 
 [class*="col-"] {
