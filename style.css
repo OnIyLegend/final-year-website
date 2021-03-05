@@ -17,35 +17,7 @@ html, body {
     color:#a8a8a8;
     text-align:center;
 }
-/*
-.sub-menu-1
-{
-  display: none;
-}
-.navbar-nav ul li: hover .sub-menu-1
-{
-position: absolute;
-background: rgb(0,100,0);
-margin-top: 15px;
-margin-left: -15px;
-}
 
-.navbar-nav ul li: hover .sub-menu-1 ul
-{
-display: block;
-margin: 10px;
-}
-
-.navbar-nav ul li: hover .sub-menu-1 ul li
-{
-width: 150;
-padding: 10px;
-border-bottom: 1px dotted #fff;
-backround: transparent;
-border-radius: 0;
-text-align: left;
-}
-*/
 
 .navbar-nav li {
     padding-right: 20px;
@@ -322,7 +294,7 @@ hr.light-100 {
 .carousel-indicators {
     display: none;
 }
-
+}
 
 /*---Firefox --*/
 .carousel-item {
@@ -351,7 +323,7 @@ figure {
 }
 
 #fixed {
-    background-image: url('img/f4.png');
+    background-image: url('img/fer3.png');
     position: fixed;
     display: block;
     top: 0;
