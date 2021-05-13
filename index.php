@@ -1,3 +1,9 @@
+<?php
+include_once('query.php');
+$sql = "SELECT raceId, name, s_year FROM races WHERE r_round=1 order by s_year";
+$result = mysqli_query($conn, $sql) or die("Bad Query: $sql");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +25,7 @@
 <!-- nav -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="img/f1.png" /></a>
+    <a class="navbar-brand" href="index.html"><img src="img/f1.png" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
     data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
@@ -53,8 +59,8 @@
                 <a class="nav-link" href="#drivers.html">Drivers</a>
 								<ul>
 									<li><a href="hamilton.html">Lewis Hamilton</a></li>
-									<li><a href="#">Valteri Bottas</a></li>
 									<li><a href="vettel.html">Sebastian Vettel</a></li>
+									<li><a href="#">Valteri Bottas</a></li>
 									<li><a href="#">Charles Leclerc</a></li>
 									<li><a href="#">Lando Norris</a></li>
 									<li><a href="#">Carlos Sainz</a></li>
@@ -81,7 +87,6 @@
 								</ul>
 
 						</li>
-
 						<li class="nav-item">
 								<a class="nav-link" href="#seasons.html">Seasons</a>
 								<ul>
@@ -98,7 +103,6 @@
 								</ul>
 						</li>
 
-
         </ul>
     </div>
 </div>
@@ -113,19 +117,19 @@
     </ul>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="img/20201.png">
+            <img src="img/f2.png">
             <div class="carousel-caption">
                 <h1 class="display-2">Formula 1 analytics</h1>
-								 <h3>2020 Season</h3>
+								 <h3>Find all the f1 data you need</h3>
                 <a href="#InfoSection" class="btn btn-outline-light btn-lg">INFO</a>
                 <a href="#SearchSection" class="btn btn-primary btn-lg">START</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="img/20201.png">
+            <img src="img/f2.png">
         </div>
         <div class="carousel-item">
-            <img src="img/20201.png">
+            <img src="img/f2.png">
         </div>
     </div>
 </div>
@@ -150,7 +154,7 @@
 <section id="SearchSection">
 <div class="row text-center">
     <div class="col-12">
-        <h1 class="display-4">Search about 2020 Season</h1>
+        <h1 class="display-4">Search Anything</h1>
     </div>
 </div>
 <div class="container h-50">
@@ -224,7 +228,7 @@
         </div>
         <div class="col-lg-6">
             <div class="carousel-inner">
-                <img src="img/2020.png" class="padding-fluid">
+                <img src="img/f3.png" class="padding-fluid">
             </div>
 
         </div>
@@ -257,6 +261,7 @@
     <div class="col-md-4">
         <img src="img/f1.png">
         <hr class="light">
+				<p>Website disclaimer All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</p>
         <p>+357 96551293</p>
         <p>up877496@myport.ac.uk</p>
         <p>Paphos, Cyprus, 8049</p>

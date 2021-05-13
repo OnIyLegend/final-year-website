@@ -1,0 +1,282 @@
+<?php
+include_once('query.php');
+$sql = "SELECT raceId, name, s_year FROM races WHERE s_year=2020 order by s_year";
+$result = mysqli_query($conn, $sql) or die("Bad Query: $sql");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>prototype site</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<body>
+
+<!-- nav -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/f1.png" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#teams.html">Teams</a>
+
+										<ul>
+											<li><a href="ferrari.html">Ferrari</a></li>
+											<li><a href="mercedes.html">Mercedes</a></li>
+											<li><a href="#">Haas</a></li>
+											<li><a href="#">Alfa Romeo</a></li>
+											<li><a href="#">AlphaTauri</a></li>
+											<li><a href="#">Racing Point/Force India</a></li>
+											<li><a href="#">Red Bull</a></li>
+											<li><a href="#">McLaren</a></li>
+											<li><a href="#">Renault</a></li>
+											<li><a href="#">Williams</a></li>
+										</ul>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#drivers.html">Drivers</a>
+								<ul>
+									<li><a href="hamilton.html">Lewis Hamilton</a></li>
+									<li><a href="#">Valteri Bottas</a></li>
+									<li><a href="vettel.html">Sebastian Vettel</a></li>
+									<li><a href="#">Charles Leclerc</a></li>
+									<li><a href="#">Lando Norris</a></li>
+									<li><a href="#">Carlos Sainz</a></li>
+									<li><a href="#">Alex Albon</a></li>
+									<li><a href="#">Max Verstappen</a></li>
+									<li><a href="#">Lance Stroll</a></li>
+									<li><a href="#">Sergio Pérez</a></li>
+								</ul>
+            </li>
+
+						<li class="nav-item">
+								<a class="nav-link" href="#races.html">Races</a>
+								<ul>
+									<li><a href="british.html">British Grand Prix</a></li>
+									<li><a href="italian.html">Italian Grand Prix</a></li>
+									<li><a href="#">Austrian Grand Prix<a></li>
+									<li><a href="#">Hungarian Grand Prix</a></li>
+									<li><a href="#">Spanish Grand Prix</a></li>
+									<li><a href="#">Belgian Grand Prix</a></li>
+									<li><a href="#">Russian Grand Prix</a></li>
+									<li><a href="#">Portuguese Grand Prix</a></li>
+									<li><a href="#">Turkish Grand Prix</a></li>
+									<li><a href="#">Abu Dhabi Grand Prix</a></li>
+								</ul>
+
+						</li>
+
+						<li class="nav-item">
+								<a class="nav-link" href="#seasons.html">Seasons</a>
+								<ul>
+									<li><a href="2020.html">2020</a></li>
+									<li><a href="2019.html">2019</a></li>
+									<li><a href="#">2018</a></li>
+									<li><a href="#">2017</a></li>
+									<li><a href="#">2016</a></li>
+									<li><a href="#">2015</a></li>
+									<li><a href="#">2014</a></li>
+									<li><a href="#">2013</a></li>
+									<li><a href="#">2012</a></li>
+									<li><a href="#">2011</a></li>
+								</ul>
+						</li>
+
+
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" daata-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/20201.png">
+            <div class="carousel-caption">
+                <h1 class="display-2">Formula 1 analytics</h1>
+								 <h3>2020 Season</h3>
+                <a href="#InfoSection" class="btn btn-outline-light btn-lg">INFO</a>
+                <a href="#SearchSection" class="btn btn-primary btn-lg">START</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/20201.png">
+        </div>
+        <div class="carousel-item">
+            <img src="img/20201.png">
+        </div>
+    </div>
+</div>
+
+<!--- aims -->
+<div class="container-fluid">
+    <div class="row jumbotron text-center padding">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-12">
+
+            <h1>Website aims to:
+            </h1><br>
+            <ul>
+                <li>Create a modern and user-friendly website</li>
+                <li>Connect a database with data dating back to 1950 until 2020</li>
+                <li>Analyse data inserted and create statistics with charts and tables</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--- Search  -->
+<section id="SearchSection">
+<div class="row text-center">
+    <div class="col-12">
+        <h1 class="display-4">Search about 2020 Season</h1>
+    </div>
+</div>
+<div class="container h-50">
+    <div class="d-flex justify-content-center h-50">
+      <div class="searchbar">
+        <input class="search_input" type="text" name="" placeholder="Search...">
+        <a href="#test" class="search_icon" data-toggle="collapse"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div id="test" class="collapse">
+            <h2 class="row text-center">Search complete</h2>
+            <div class="carousel-inner">
+                <img src="img/Analysis.png">
+            </div>
+      </div>
+      <p class="Info">How to use: Hover your mouse above the search icon and type in what team,track,driver or season you want to look up and press the search icon (for now an image will apear us preview later on it will be replaced with the actual data) </p>
+  </div>
+
+</section>
+
+<!--- main background -->
+<figure>
+    <div class="fixed-wrap">
+        <div id="fixed">
+        </div>
+    </div>
+</figure>
+
+<!--- project info -->
+<section id="InfoSection">
+<br>
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class=" col-lg-6">
+            <h2>Methodology</h2>
+
+						<?php
+						while($row = mysqli_fetch_array($result)) {
+							?>
+							<div style="text-allign:center;"> : <br>
+								<?php echo"{$row['name']}<br>"; ?>
+								<?php echo"{$row['s_year']}<br>";?> </div>
+	<?php
+						}
+		?>
+
+            <h2>Issues I will be facing </h2>
+
+            <p class="align-left">
+                .....................
+            </p>
+            <ul>
+                <li>-------------------------</li>
+                <li>-------------------------</li>
+                <li>-------------------------</li>
+                <li>Is there a way to answer all the above questions</li>
+            </ul>
+            <h2>How am I addressing the issues</h2>
+
+            <p> A ..........................
+            </p>
+
+            <h5>Example</h5>
+
+            <p> Let’s say that ........
+            </p>
+            <ul>
+                <li>--------------------</li>
+                <li>--------------------</li>
+                <li>--------------------</li>
+                <li>--------------------</li>
+            </ul>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="carousel-inner">
+                <img src="img/2020.png" class="padding-fluid">
+            </div>
+
+        </div>
+    </div>
+<hr class="my-4">
+</div>
+</section>
+
+<!--- Connect
+<div class="container-fluid padding">
+<div class="row text-center padding">
+    <div class="col-12">
+        <h2>Connect</h2>
+    </div>
+    <div class="col-12 social padding">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</div>
+</div>
+-->
+
+
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center">
+    <div class="col-md-4">
+        <img src="img/f1.png">
+        <hr class="light">
+        <p>+357 96551293</p>
+        <p>up877496@myport.ac.uk</p>
+        <p>Paphos, Cyprus, 8049</p>
+    </div>
+</div>
+</div>
+</footer>
+
+
+
+</body>
+</html>
