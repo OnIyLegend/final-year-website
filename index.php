@@ -1,8 +1,3 @@
-<?php
-include_once('query.php');
-$sql = "SELECT raceId, name, s_year FROM races WHERE r_round=1 order by s_year";
-$result = mysqli_query($conn, $sql) or die("Bad Query: $sql");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
